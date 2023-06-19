@@ -7,7 +7,7 @@ if [[ $SCALE_VALUE -ge 1 ]]; then
   # Generate the upstream backend server list
   server_list=""
   for ((i = 1; i <= $SCALE_VALUE; i++)); do
-    server_list+="server app-test-app-$i:5000;\n"
+    server_list+="server whist-task-app-$i:5000;\n"
   done
 
   # Insert the server_list into the NGINX configuration file after the upstream backend block starts
